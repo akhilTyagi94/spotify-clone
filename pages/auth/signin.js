@@ -1,9 +1,22 @@
+import Loader from "@/components/Loader";
 import { getProviders, signIn, useSession } from "next-auth/react";
 import Head from "next/head";
 import Image from "next/image";
+import { useRouter } from "next/router";
+import { useEffect } from "react";
 
 function Signin({ providers }) {
   const { data: session } = useSession();
+  const router = useRouter();
+
+  useEffect(() => {
+    if (session) {
+      router.push("/");
+    }
+  }, [session]);
+
+  if (session) return <Loader />;
+
   return (
     <div className="bg-black h-screen flex flex-col items-center pt-40 space-y-8">
       <Head>
