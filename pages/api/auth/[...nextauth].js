@@ -57,7 +57,7 @@ export default NextAuth({
     }),
     // ...add more providers here
   ],
-  pages: { signIn: "/auth/signin" },
+  pages: { signIn: "/auth/signin", error: "/auth/error" },
   callbacks: {
     async jwt({ token, user, account }) {
       // Initial sign in
