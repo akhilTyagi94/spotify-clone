@@ -26,6 +26,7 @@ function Signin({ providers }) {
 
       <Image
         src="https://rb.gy/y9mwtb"
+        alt="Spotify"
         height={250}
         width={600}
         objectFit="contain"
