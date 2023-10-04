@@ -14,7 +14,7 @@ function Body({ spotifyApi, chooseTrack }) {
   useEffect(() => {
     if (!accessToken) return;
     spotifyApi.setAccessToken(accessToken);
-  }, [accessToken]);
+  }, [accessToken, spotifyApi]);
 
   // Search
   useEffect(() => {
@@ -35,7 +35,7 @@ function Body({ spotifyApi, chooseTrack }) {
         })
       );
     });
-  }, [search, accessToken]);
+  }, [search, accessToken, spotifyApi]);
 
   // New Releases
   useEffect(() => {
@@ -54,7 +54,7 @@ function Body({ spotifyApi, chooseTrack }) {
         })
       );
     });
-  }, [accessToken]);
+  }, [accessToken, spotifyApi]);
 
   return (
     <section className="bg-black ml-24 py-4 space-y-8 md:max-w-6xl flex-grow md:mr-2.5">

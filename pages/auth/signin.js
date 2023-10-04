@@ -13,7 +13,7 @@ function Signin({ providers }) {
     if (session) {
       router.push("/");
     }
-  }, [session]);
+  }, [session, router]);
 
   if (session) return <Loader />;
 

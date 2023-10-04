@@ -28,7 +28,7 @@ function Right({ spotifyApi, chooseTrack }) {
         })
       );
     });
-  }, [accessToken]);
+  }, [accessToken, spotifyApi]);
 
   return (
     <section className="p-4 space-y-8 pr-8">

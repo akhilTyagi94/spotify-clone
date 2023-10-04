@@ -11,7 +11,7 @@ function Player({ accessToken, trackUri }) {
     if (trackUri) {
       setPlay(true);
     }
-  }, [trackUri]);
+  }, [trackUri, setPlay]);
 
   if (!accessToken) return null;
 
